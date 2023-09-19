@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header id="header-container">
+        <div>
+            <img src="images/HODLINFO.8f78fc06.png" alt="" id="header-img">
+        </div>
+        <div id="header-container-2">
+            <label for="menuInr"></label>
+            <select name="" id="menuInr">
+                <option value="INR">INR</option>
+            </select>
+            <label for="menuCoins"></label>
+            <select name="" id="menuCoins">
+                <option value="BTC">BTC</option>
+                <option value="ETH">ETH</option>
+                <option value="USDT">USDT</option>
+                <option value="XRP">XRP</option>
+                <option value="TRX">TRX</option>
+                <option value="DASH">DASH</option>
+                <option value="ZEC">ZEC</option>
+                <option value="XEM">XEM</option>
+                <option value="IOST">IOST</option>
+                <option value="WIN">WIN</option>
+                <option value="BTT">BTT</option>
+                <option value="WRX">WRX</option>
+            </select>
+            <div id="buyLink">
+                <a href="#">Buy ETH</a>
+            </div>
+
+        </div>
+        <div id="header-container-3">
+            <div>
+                <p>Timer</p>
+            </div>
+            <div>
+                <button id="btn">Connect Telegram</button>
+            </div>
+            <div>
+                <p>Toggler</p>
+            </div>
+        </div>
+    </header>
+
+<div id="sentence-one">
+    <p>Best Price to Trade</p>
+</div>
+
+<div id="price-container">
+    <div>
+        <h2>0.94%</h2>
+        <p>5 Min</p>
+    </div>
+    <div>
+        <h2>1.3%</h2>
+        <p>1 Hour</p>
+    </div>
+    <div>
+        <h1>₹ 24,43,817</h1>
+    </div>
+    <div>
+        <h2>5.28%</h2>
+        <p>1 Day</p>
+    </div>
+    <div>
+        <h2>8.88%</h2>
+        <p>7 Days</p>
+    </div>
+</div>
+
+<div id="sentence-two">
+    <p>Average BTC/INR net price including commission</p>
+</div>
+
+<div class="result-container">
+    <div class="result heading">
+        <div>
+            <p>#</p>
+        </div>
+        <div>
+            <p>Name</p>
+        </div>
+        <div>
+            <p>Last</p>
+        </div>
+        <div>
+            <p>Buy</p>
+        </div>
+        <div>
+            <p>Sell</p>
+        </div>
+        <div>
+            <p>Volume</p>
+        </div>
+        <div>
+            <p>Base Unit</p>
+        </div>
+
+    </div>
+<% for(let i=0;i<results.length;i++){ %>
+    <div class="result data">
+        <div>
+            <p><%= i+1 %></p>
+        </div>
+        <div>
+            <p><%= results[i].name %></p>
+        </div>
+        <div>
+            <p><%= results[i].last %></p>
+        </div>
+        <div>
+            <p><%= results[i].buy %></p>
+        </div>
+        <div>
+            <p><%= results[i].sell %></p>
+        </div>
+        <div>
+            <p><%= results[i].volume %></p>
+        </div>
+        <div>
+            <p><%= results[i].base_unit %></p>
+        </div>
+
+    </div>
+<% } %>
+</div>
+
+<footer id="footer">
+<div>
+    <p>Copyright &copy; 2019     Hodlinfo.com</p>
+</div>
+<div>
+    <p>Support</p>
+</div>
+</footer>
+
+</body>
+
+</html>
